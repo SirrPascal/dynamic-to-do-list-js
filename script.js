@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to add a new task
     function addTask() {
-        const taskText = taskInput.value.trim(); // Get the input value and remove extra spaces
+        const taskText = taskInput.value.trim(); // Get input value and remove extra spaces
 
         if (taskText === "") {
             alert("Please enter a task."); // Alert if input is empty
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create a remove button for the task
         const removeButton = document.createElement('button');
         removeButton.textContent = "Remove";
-        removeButton.className = 'remove-btn';
+        removeButton.classList.add('remove-btn'); // Corrected to use classList.add
 
         // Add click event to remove the task
         removeButton.onclick = () => {
